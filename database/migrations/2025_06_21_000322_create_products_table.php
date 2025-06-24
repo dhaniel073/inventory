@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('sku')->unique();
-            $table->string('quantity', 64);
+            $table->integer('quantity')->nullable();
             $table->char('status');
             $table->integer('cost_price')->nullable();
             $table->integer('selling_price')->nullable();
-            $table->timestamp('last_used_at')->nullable();
-            $table->timestamp('expires_at')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }

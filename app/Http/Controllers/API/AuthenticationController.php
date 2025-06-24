@@ -23,7 +23,6 @@ class AuthenticationController extends Controller
         $rules = ([
             'name' => 'required|min:3',
             'email' => 'required|email|unique:users',
-            'role' => 'required|in:admin,staff',
             'password' => 'required|min:6'
         ]);
 

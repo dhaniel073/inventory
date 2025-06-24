@@ -21,8 +21,10 @@ class Product extends Authenticatable
     protected $fillable = [
         'name',
         'quantity',
+        'sku',
         'cost_price',
-        'selling_price'
+        'selling_price',
+        'status',
 
     ];
     /**
@@ -44,6 +46,7 @@ class Product extends Authenticatable
         return [
             'name',
             'quantity',
+            'sku',
             'cost_price',
             'selling_price'
         ];
